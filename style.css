@@ -1,0 +1,186 @@
+
+html {
+    font-size: 150%;
+    font-weight: 300;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    line-height: 1.1;
+  }
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(250deg, rgb(101, 154, 253), rgb(101, 230, 253));
+    height: 100vh;
+}
+
+.calculator {
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.mem-display{
+  text-align: left;
+  font-size: 10px;
+  padding: 20px;
+  color: #f5f7fa;
+  background-color: #1f2933;
+}
+.calculator_display {
+    background-color:#1f2933;
+    color: #f5f7fa;
+    width: 16.25rem;
+    padding: 0.75rem 1rem;
+    text-align: right;
+    font-size: calc(1rem * 1.2 * 1.2);
+    line-height: 2rem;
+  }
+
+  .calculator_keys{
+      background-color: #cbd2d9;
+      display: grid;
+      grid-gap: 2px;
+      grid-template-columns: repeat(4, auto);
+
+      grid-template-areas: 
+      "plus minus times divide"
+      "ms mc mr ac"
+      "seven eight nine c"
+      "four five six equal"
+      "one two three equal"
+      "dot zero modulo equal"
+      ;
+  }
+
+  .calculator_keys > button{
+    padding: 0.75rem 1rem;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 1rem;
+    border: 0;
+  }
+
+  [data-key="MS"]{
+    grid-area: ms;
+  }
+  [data-key="MC"]{
+    grid-area: mc;
+  }
+  
+  [data-key="Mr"]{
+    grid-area: mr;
+  }
+
+  [data-key="+"] {
+    grid-area: plus;
+  }
+
+  [data-key="-"] {
+    grid-area: minus;
+  }
+
+  [data-key="&times;"] {
+    grid-area: times;
+  }
+
+  [data-key="÷"] {
+    grid-area: divide;
+  }
+
+  [data-key="7"] {
+    grid-area: seven;
+  }
+
+  [data-key="8"] {
+    grid-area: eight;
+  }
+
+  [data-key="9"] {
+    grid-area: nine;
+  }
+
+  [data-key="modulo"] {
+    grid-area: modulo;
+  }
+
+  [data-key="4"] {
+    grid-area: four;
+  }
+
+  [data-key="5"] {
+    grid-area: five;
+  }
+
+  [data-key="6"] {
+    grid-area: six;
+  }
+
+  [data-key="AC"] {
+    grid-area: ac;
+  }
+
+  [data-key="1"] {
+    grid-area: one;
+  }
+
+  [data-key="2"] {
+    grid-area: two;
+  }
+
+  [data-key="3"] {
+    grid-area: three;
+  }
+ 
+  [data-key="."] {
+    grid-area: dot;
+  }
+  [data-key="="] {
+    grid-area: equal;
+  }
+
+  [data-key="0"] {
+    grid-area: zero;
+  }
+
+  [data-key="C"] {
+    grid-area: c;
+  }
+
+  [data-type="number"] {
+      background-color: #fff;
+  }
+
+
+  [data-type="operator"] {
+    background-color: #e4e7eb;
+  }
+
+  [data-type="number"]:active,
+  [data-type="operator"]:active{
+    background-color:  #cbd2d9;
+  }
+
+  [data-key="="]{
+      background-color: #f9703e;
+  }
+
+  [data-key="="]:active{
+    background-color: #f35627;
+  }
+
+  [data-key="AC"],
+  [data-key="C"] {
+      background-color: #ff9466;
+  }
+  [data-key="AC"]:active,
+  [data-key="C"]:active {
+      background-color: #f9703e;
+  }
+
+  @media screen and (max-width: 500px){
+      html{
+          font-size: 100%;
+      }
+  }
+
